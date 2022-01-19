@@ -1,7 +1,10 @@
-{% if question_list %}
+{% if latest_question_list %}
     <ul>
-    {% for question in question_list %}
-        <li>{{ question }}</a></li>
+    {% for question in latest_question_list %}
+        <li>{{ question.question_text }}</li>
+        {% for choice in latest_choice_list %}
+            <li>{{ choice.choice_text }}</li>
+        {% endfor %}
     {% endfor %}
     </ul>
 {% else %}
