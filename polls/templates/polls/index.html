@@ -1,9 +1,3 @@
-{% if latest_theme_list %}
-    <ul>
-    {% for theme in latest_theme_list %}
-        <li><a href="{% url 'polls:detail' theme.id %}">{{ theme.theme_text }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
+{% load static %}
+
+<img src="{% static 'polls/grumpy.jpg' %}">
